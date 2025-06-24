@@ -30,26 +30,29 @@
         <button class="convert-button">Convert</button>    
      </section>
      
-  <!-- Conversion Output Section -->   
+  <!-- Mass - Conversion Output Section --> 
+
      <section class="conversion-section">
         <div class="conversion-item">
-           <!-- Header Row --> 
+           <!-- Header Section --> 
+
           <div class="conversion-header-row">
             <span class="tag-line-container">
                 <img src="images/ellipse.svg" alt="ellipse" class="ellipse">
                 <p class="tag-line">MASS</p>
             </span>
             <span class="tag-line-container">
-                <p class="tag-line">KILLOGRAMS / POUNDS</p>
+                <p class="tag-line">KILLOGRAMS/POUNDS</p>
             </span>
           </div>
 
+          <!-- Conversion Section --> 
           <div class="conversion-container">
-          <!-- Conversion Row 1 --> 
+            <!-- Conversion Row 1 --> 
             <div class="conversion-row-container">
               <div class="conversion-row-item">
                 <p class="conversion-row-value">50</p>
-                <p class="conversion-row-badge">KILOS</p>
+                <p class="conversion-row-badge" id="badge">KILOS</p>
               </div>
               <div class="chevron-container">
                 <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 10 16" fill="none">
@@ -58,7 +61,7 @@
               </div>
               <div class="conversion-row-item">
                 <p class="conversion-row-value">44.092</p>
-                <p class="conversion-row-badge">POUNDS</p>
+                <p class="conversion-row-badge" id="badge">POUNDS</p>
               </div>
             </div>
 
@@ -66,7 +69,7 @@
             <div class="conversion-row-container">
               <div class="conversion-row-item">
                 <p class="conversion-row-value">50</p>
-                <p class="conversion-row-badge">KILOS</p>
+                <p class="conversion-row-badge" id="badge">POUNDS</p>
               </div>
               <div class="chevron-container">
                 <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 10 16" fill="none">
@@ -75,10 +78,64 @@
               </div>
               <div class="conversion-row-item">
                 <p class="conversion-row-value">44.092</p>
-                <p class="conversion-row-badge">POUNDS</p>
+                <p class="conversion-row-badge" id="badge">KILOS</p>
               </div>
             </div>
-          
+          </div>
+        </div>
+     </section>
+
+     <!-- Length - Conversion Output Section --> 
+
+     <section class="conversion-section">
+        <div class="conversion-item">
+           <!-- Header Section --> 
+
+          <div class="conversion-header-row">
+            <span class="tag-line-container">
+                <img src="images/ellipse.svg" alt="ellipse" class="ellipse">
+                <p class="tag-line">LENGTH</p>
+            </span>
+            <span class="tag-line-container">
+                <p class="tag-line">METERS/FEET</p>
+            </span>
+          </div>
+
+          <!-- Conversion Section --> 
+          <div class="conversion-container">
+            <!-- Conversion Row 1 --> 
+            <div class="conversion-row-container">
+              <div class="conversion-row-item">
+                <p class="conversion-row-value">50</p>
+                <p class="conversion-row-badge" id="badge">METERS</p>
+              </div>
+              <div class="chevron-container">
+                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 10 16" fill="none">
+                  <path d="M1.8335 14.3334L8.16683 8.00002L1.8335 1.66669" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="conversion-row-item">
+                <p class="conversion-row-value">44.092</p>
+                <p class="conversion-row-badge" id="badge">FEET</p>
+              </div>
+            </div>
+
+            <!-- Conversion Row 2 --> 
+            <div class="conversion-row-container">
+              <div class="conversion-row-item">
+                <p class="conversion-row-value">50</p>
+                <p class="conversion-row-badge" id="badge">FEET</p>
+              </div>
+              <div class="chevron-container">
+                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 10 16" fill="none">
+                  <path d="M1.8335 14.3334L8.16683 8.00002L1.8335 1.66669" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="conversion-row-item">
+                <p class="conversion-row-value">44.092</p>
+                <p class="conversion-row-badge" id="badge">METERS</p>
+              </div>
+            </div>
           </div>
         </div>
      </section>
