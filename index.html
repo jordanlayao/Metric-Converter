@@ -18,14 +18,33 @@
   </head>
 
 <body>
-    <!-- Content goes here -->
-     <section class="container">
-        <div class="header">
-            <h1>Metric Converter</h1>
-            
+    
+  <!-- Conversion InputSection -->
+     <section class="header">
+        <div class="tag-line-container">
+          <p class="tag-line">METRIC</p>
+          <img src="images/arrows.svg" alt="arrows" class="arrows">
+          <p class="tag-line">IMPERIAL CONVERTER</p>
         </div>
         <input type="text" name="yourInputName" id="yourInputId" placeholder="Enter text here">
+        <button class="convert-button">Convert</button>    
      </section>
+     
+  <!-- Conversion Output Section -->   
+     <section class="conversion-section">
+        <div class="conversion-item">
+          <div class="conversion-header-row">
+            <span class="tag-line-container">
+                <img src="images/ellipse.svg" alt="ellipse" class="ellipse">
+                <p class="tag-line">MASS</p>
+            </span>
+            <span class="tag-line-container">
+                <p class="tag-line">KILLOGRAMS / POUNDS</p>
+            </span>
+          </div>
+        </div>
+     </section>
+
     <script src="index.js"></script>
 </body>
 
