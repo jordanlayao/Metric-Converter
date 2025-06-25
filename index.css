@@ -3,17 +3,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: none;
 }
 
-html, body {
-  height: 100%;
+
+
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background: radial-gradient(ellipse at center, #fff 0%, #d1d1d1 100%);
-  background-attachment: fixed;
-  overflow-x: hidden;
 }
 
 body {
+  overflow: scroll;
+  min-height: 100vh;
   height: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

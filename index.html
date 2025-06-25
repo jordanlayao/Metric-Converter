@@ -15,6 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="icon" href="favicons/favicon.ico" sizes="any" />
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="favicons/manifest.webmanifest" />
+  
   </head>
 
 <body>
@@ -140,7 +146,65 @@
         </div>
      </section>
 
-    <script src="index.js"></script>
+     <!-- Volume - Conversion Output Section --> 
+
+     <section class="conversion-section">
+        <div class="conversion-item">
+           <!-- Header Section --> 
+
+          <div class="conversion-header-row">
+            <span class="tag-line-container">
+                <img src="images/ellipse.svg" alt="ellipse" class="ellipse">
+                <p class="tag-line">VOLUME</p>
+            </span>
+            <span class="tag-line-container">
+                <p class="tag-line">LITTERS/GALLONS</p>
+            </span>
+          </div>
+
+          <!-- Conversion Section --> 
+          <div class="conversion-container">
+            <!-- Conversion Row 1 --> 
+            <div class="conversion-row-container">
+              <div class="conversion-row-item">
+                <p class="conversion-row-value">50</p>
+                <p class="conversion-row-badge" id="badge">LITTERS</p>
+              </div>
+              <div class="chevron-container">
+                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 10 16" fill="none">
+                  <path d="M1.8335 14.3334L8.16683 8.00002L1.8335 1.66669" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="conversion-row-item">
+                <p class="conversion-row-value">44.092</p>
+                <p class="conversion-row-badge" id="badge">GALLONS</p>
+              </div>
+            </div>
+
+            <!-- Conversion Row 2 --> 
+            <div class="conversion-row-container">
+              <div class="conversion-row-item">
+                <p class="conversion-row-value">50</p>
+                <p class="conversion-row-badge" id="badge">GALLONS</p>
+              </div>
+              <div class="chevron-container">
+                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 10 16" fill="none">
+                  <path d="M1.8335 14.3334L8.16683 8.00002L1.8335 1.66669" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="conversion-row-item">
+                <p class="conversion-row-value">44.092</p>
+                <p class="conversion-row-badge" id="badge">LITTERS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+     </section>
+
+     
+
+     <script src="index.js"></script>
+
 </body>
 
 </html>
