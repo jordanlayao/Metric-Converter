@@ -7,54 +7,78 @@
 1 pound = 0.453592 kilogram
 */
 
+// Check if GSAP is loaded
+if (typeof gsap === 'undefined') {
+  console.error('GSAP is not loaded!');
+} else {
+  console.log('GSAP is loaded successfully!');
+}
+
 function formatNumber(value) {
   return parseFloat(value.toFixed(3));
 }
+
+// Smooth number counting animation
+function animateNumber(element, toValue, duration = 1000) {
+  const fromValue = parseFloat(element.textContent) || 0;
+  const startTime = performance.now();
+  
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const current = fromValue + (toValue - fromValue) * progress;
+    element.textContent = formatNumber(current);
+    
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+  
+  requestAnimationFrame(update);
+}
+
+// Store all conversion factors in an object
+const conversionFactors = {
+  pounds: 2.20462,
+  kilos: 1/2.20462,
+  feet: 3.28084,
+  meters: 1/3.28084,
+  gallons: 0.264172,
+  liters: 1/0.264172
+};
+
+// Store all DOM elements in an object
+const elements = {
+  pounds: document.querySelector(".pounds-value"),
+  kilos: document.querySelector(".kilos-value"),
+  feet: document.querySelector(".feet-value"),
+  meters: document.querySelector(".meters-value"),
+  gallons: document.querySelector(".gallons-value"),
+  liters: document.querySelector(".liters-value")
+};
 
 let convertBtn = document.querySelector(".convert-button");
 let inputValue = document.querySelector(".yourInputId");
 let userValueInputs = document.querySelectorAll(".user-value-input");
 
-let poundsValue = document.querySelector(".pounds-value");
-let kilosValue = document.querySelector(".kilos-value");
-let feetValue = document.querySelector(".feet-value");
-let metersValue = document.querySelector(".meters-value");
-let gallonsValue = document.querySelector(".gallons-value");
-let litersValue = document.querySelector(".liters-value");
-
-const conversionFactors = {
-  "meter": 3.281,
-  "feet": 0.3048,
-  "liter": 0.264,
-  "gallon": 3.78541,
-  "kilogram": 2.204,
-};
-
-/* Convert All User Value Inputs To The Input Value When The Convert Button Is Clicked */
 convertBtn.addEventListener("click", function() {
-  let value = inputValue.value;
+  let value = parseFloat(inputValue.value);
   
   // Update all user input values
   userValueInputs.forEach(function(el) {
     el.textContent = value;
   });
   
-  // Example conversions with formatting
-  let pounds = formatNumber(value * 2.20462);
-  let kilos = formatNumber(value / 2.20462);
-  let feet = formatNumber(value * 3.28084);
-  let meters = formatNumber(value / 3.28084);
-  let gallons = formatNumber(value * 0.264172);
-  let liters = formatNumber(value / 0.264172);
-  
-  // Update the display
-  if (poundsValue) poundsValue.textContent = pounds;
-  if (kilosValue) kilosValue.textContent = kilos;
-  if (feetValue) feetValue.textContent = feet;
-  if (metersValue) metersValue.textContent = meters;
-  if (gallonsValue) gallonsValue.textContent = gallons;
-  if (litersValue) litersValue.textContent = liters;
+  // Animate all converted values
+  Object.keys(conversionFactors).forEach(function(unit) {
+    if (elements[unit]) {
+      let convertedValue = value * conversionFactors[unit];
+      animateNumber(elements[unit], convertedValue, 1000);
+    }
+  });
 });
+
+
 
 
 

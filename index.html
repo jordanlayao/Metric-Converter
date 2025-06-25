@@ -26,7 +26,7 @@
   </head>
 
 <body>
-    
+
   <!-- Conversion InputSection -->
      <section class="header">
         <div class="tag-line-container">
@@ -34,7 +34,7 @@
           <img src="images/arrows.svg" alt="arrows" class="arrows">
           <p class="tag-line">IMPERIAL CONVERTER</p>
         </div>
-        <input type="text" name="yourInputName" class="yourInputId" placeholder="50">
+        <input type="text" name="yourInputName" class="yourInputId" placeholder="50" autocomplete="off">
         <button class="convert-button">Convert</button>    
      </section>
      
@@ -59,7 +59,7 @@
             <!-- Conversion Row 1 --> 
             <div class="conversion-row-container">
               <div class="conversion-row-item">
-                <p class="conversion-row-value" id="user-value-input">50</p>
+                <p class="conversion-row-value user-value-input">50</p>
                 <p class="conversion-row-badge" id="badge">KILOS</p>
               </div>
               <div class="chevron-container">
@@ -68,7 +68,7 @@
                 </svg>
               </div>
               <div class="conversion-row-item">
-                <p class="conversion-row-value">44.092</p>
+                <p class="conversion-row-value pounds-value">110.231</p>
                 <p class="conversion-row-badge" id="badge">POUNDS</p>
               </div>
             </div>
@@ -76,7 +76,7 @@
             <!-- Conversion Row 2 --> 
             <div class="conversion-row-container">
               <div class="conversion-row-item">
-                <p class="conversion-row-value" id="user-value-input">50</p>
+                <p class="conversion-row-value user-value-input">50</p>
                 <p class="conversion-row-badge" id="badge">POUNDS</p>
               </div>
               <div class="chevron-container">
@@ -85,7 +85,7 @@
                 </svg>
               </div>
               <div class="conversion-row-item">
-                <p class="conversion-row-value">44.092</p>
+                <p class="conversion-row-value kilos-value">22.68</p>
                 <p class="conversion-row-badge" id="badge">KILOS</p>
               </div>
             </div>
@@ -114,7 +114,7 @@
             <!-- Conversion Row 1 --> 
             <div class="conversion-row-container">
               <div class="conversion-row-item">
-                <p class="conversion-row-value" id="user-value-input">50</p>
+                <p class="conversion-row-value user-value-input">50</p>
                 <p class="conversion-row-badge" id="badge">METERS</p>
               </div>
               <div class="chevron-container">
@@ -123,7 +123,7 @@
                 </svg>
               </div>
               <div class="conversion-row-item">
-                <p class="conversion-row-value">44.092</p>
+                <p class="conversion-row-value feet-value">164.042</p>
                 <p class="conversion-row-badge" id="badge">FEET</p>
               </div>
             </div>
@@ -131,7 +131,7 @@
             <!-- Conversion Row 2 --> 
             <div class="conversion-row-container">
               <div class="conversion-row-item">
-                <p class="conversion-row-value" id="user-value-input">50</p>
+                <p class="conversion-row-value user-value-input">50</p>
                 <p class="conversion-row-badge" id="badge">FEET</p>
               </div>
               <div class="chevron-container">
@@ -140,7 +140,7 @@
                 </svg>
               </div>
               <div class="conversion-row-item">
-                <p class="conversion-row-value">44.092</p>
+                <p class="conversion-row-value meters-value">15.24</p>
                 <p class="conversion-row-badge" id="badge">METERS</p>
               </div>
             </div>
@@ -169,7 +169,7 @@
             <!-- Conversion Row 1 --> 
             <div class="conversion-row-container">
               <div class="conversion-row-item">
-                <p class="conversion-row-value" id="user-value-input">50</p>
+                <p class="conversion-row-value user-value-input">50</p>
                 <p class="conversion-row-badge" id="badge">LITTERS</p>
               </div>
               <div class="chevron-container">
@@ -178,7 +178,7 @@
                 </svg>
               </div>
               <div class="conversion-row-item">
-                <p class="conversion-row-value">44.092</p>
+                <p class="conversion-row-value gallons-value">13.209</p>
                 <p class="conversion-row-badge" id="badge">GALLONS</p>
               </div>
             </div>
@@ -186,7 +186,7 @@
             <!-- Conversion Row 2 --> 
             <div class="conversion-row-container">
               <div class="conversion-row-item">
-                <p class="conversion-row-value" id="user-value-input">50</p>
+                <p class="conversion-row-value user-value-input">50</p>
                 <p class="conversion-row-badge" id="badge">GALLONS</p>
               </div>
               <div class="chevron-container">
@@ -195,7 +195,7 @@
                 </svg>
               </div>
               <div class="conversion-row-item">
-                <p class="conversion-row-value">44.092</p>
+                <p class="conversion-row-value liters-value">189.271</p>
                 <p class="conversion-row-badge" id="badge">LITTERS</p>
               </div>
             </div>
@@ -203,6 +203,7 @@
         </div>
      </section>
 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
      <script src="index.js"></script>
 
 </body>
